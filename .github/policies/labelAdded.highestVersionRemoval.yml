@@ -20,7 +20,7 @@ configuration:
         then:
           - addReply:
               reply: >-
-                Hello @${issueAuthor},
+                Hello ${issueAuthor},
 
 
                 This PR removes the highest available version of the package from the repository.
@@ -29,7 +29,10 @@ configuration:
                 Please provide the reason for removal to help our moderators understand the context.
 
 
-                Template: msftbot/highestVersionRemoval
+                (This might be in error if the version is switching from semantic to string, or string to semantic.)
+
+
+                ###### Template: msftbot/highestVersionRemoval
           - assignTo:
               author: True
           - addLabel:
